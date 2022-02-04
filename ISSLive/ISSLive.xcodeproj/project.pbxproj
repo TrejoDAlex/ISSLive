@@ -9,29 +9,33 @@
 /* Begin PBXBuildFile section */
 		FAC2C4DC27AB062400C46AF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4DB27AB062400C46AF1 /* AppDelegate.swift */; };
 		FAC2C4DE27AB062400C46AF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4DD27AB062400C46AF1 /* SceneDelegate.swift */; };
-		FAC2C4E027AB062400C46AF1 /* ISSPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4DF27AB062400C46AF1 /* ISSPositionViewController.swift */; };
+		FAC2C4E027AB062400C46AF1 /* ISSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4DF27AB062400C46AF1 /* ISSViewController.swift */; };
 		FAC2C4E327AB062400C46AF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC2C4E127AB062400C46AF1 /* Main.storyboard */; };
 		FAC2C4E527AB062700C46AF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC2C4E427AB062700C46AF1 /* Assets.xcassets */; };
 		FAC2C4E827AB062700C46AF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC2C4E627AB062700C46AF1 /* LaunchScreen.storyboard */; };
 		FAC2C4F427AB0B6D00C46AF1 /* OpenNotifyApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4F327AB0B6D00C46AF1 /* OpenNotifyApiProtocol.swift */; };
-		FAC2C4F627AB0CE200C46AF1 /* OpenNotifyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4F527AB0CE200C46AF1 /* OpenNotifyClient.swift */; };
+		FAC2C4F627AB0CE200C46AF1 /* OpenNotifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4F527AB0CE200C46AF1 /* OpenNotifyViewModel.swift */; };
 		FAC2C4F827AB104000C46AF1 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4F727AB104000C46AF1 /* Position.swift */; };
 		FAC2C4FA27AB116D00C46AF1 /* Crew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4F927AB116D00C46AF1 /* Crew.swift */; };
+		FAC2C4FE27AC931600C46AF1 /* PositionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4FD27AC931600C46AF1 /* PositionViewModel.swift */; };
+		FAC2C50027AC98B900C46AF1 /* CrewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4FF27AC98B900C46AF1 /* CrewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FAC2C4D827AB062400C46AF1 /* ISSLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISSLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC2C4DB27AB062400C46AF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC2C4DD27AB062400C46AF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FAC2C4DF27AB062400C46AF1 /* ISSPositionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSPositionViewController.swift; sourceTree = "<group>"; };
+		FAC2C4DF27AB062400C46AF1 /* ISSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSViewController.swift; sourceTree = "<group>"; };
 		FAC2C4E227AB062400C46AF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAC2C4E427AB062700C46AF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAC2C4E727AB062700C46AF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC2C4E927AB062700C46AF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC2C4F327AB0B6D00C46AF1 /* OpenNotifyApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNotifyApiProtocol.swift; sourceTree = "<group>"; };
-		FAC2C4F527AB0CE200C46AF1 /* OpenNotifyClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNotifyClient.swift; sourceTree = "<group>"; };
+		FAC2C4F527AB0CE200C46AF1 /* OpenNotifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenNotifyViewModel.swift; sourceTree = "<group>"; };
 		FAC2C4F727AB104000C46AF1 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		FAC2C4F927AB116D00C46AF1 /* Crew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crew.swift; sourceTree = "<group>"; };
+		FAC2C4FD27AC931600C46AF1 /* PositionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionViewModel.swift; sourceTree = "<group>"; };
+		FAC2C4FF27AC98B900C46AF1 /* CrewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +68,12 @@
 		FAC2C4DA27AB062400C46AF1 /* ISSLive */ = {
 			isa = PBXGroup;
 			children = (
+				FAC2C4FC27AC927D00C46AF1 /* Common */,
+				FAC2C4FB27AC927100C46AF1 /* ViewModel */,
 				FAC2C4F227AB098A00C46AF1 /* Controller */,
 				FAC2C4F127AB098200C46AF1 /* View */,
 				FAC2C4F027AB097B00C46AF1 /* Model */,
 				FAC2C4EF27AB097300C46AF1 /* Network */,
-				FAC2C4DB27AB062400C46AF1 /* AppDelegate.swift */,
-				FAC2C4DD27AB062400C46AF1 /* SceneDelegate.swift */,
 				FAC2C4E427AB062700C46AF1 /* Assets.xcassets */,
 				FAC2C4E927AB062700C46AF1 /* Info.plist */,
 			);
@@ -80,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC2C4F327AB0B6D00C46AF1 /* OpenNotifyApiProtocol.swift */,
-				FAC2C4F527AB0CE200C46AF1 /* OpenNotifyClient.swift */,
+				FAC2C4F527AB0CE200C46AF1 /* OpenNotifyViewModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -106,9 +110,27 @@
 		FAC2C4F227AB098A00C46AF1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FAC2C4DF27AB062400C46AF1 /* ISSPositionViewController.swift */,
+				FAC2C4DF27AB062400C46AF1 /* ISSViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAC2C4FB27AC927100C46AF1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAC2C4FD27AC931600C46AF1 /* PositionViewModel.swift */,
+				FAC2C4FF27AC98B900C46AF1 /* CrewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAC2C4FC27AC927D00C46AF1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FAC2C4DB27AB062400C46AF1 /* AppDelegate.swift */,
+				FAC2C4DD27AB062400C46AF1 /* SceneDelegate.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,13 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC2C4E027AB062400C46AF1 /* ISSPositionViewController.swift in Sources */,
+				FAC2C4E027AB062400C46AF1 /* ISSViewController.swift in Sources */,
 				FAC2C4F427AB0B6D00C46AF1 /* OpenNotifyApiProtocol.swift in Sources */,
 				FAC2C4F827AB104000C46AF1 /* Position.swift in Sources */,
+				FAC2C4FE27AC931600C46AF1 /* PositionViewModel.swift in Sources */,
 				FAC2C4FA27AB116D00C46AF1 /* Crew.swift in Sources */,
 				FAC2C4DC27AB062400C46AF1 /* AppDelegate.swift in Sources */,
 				FAC2C4DE27AB062400C46AF1 /* SceneDelegate.swift in Sources */,
-				FAC2C4F627AB0CE200C46AF1 /* OpenNotifyClient.swift in Sources */,
+				FAC2C4F627AB0CE200C46AF1 /* OpenNotifyViewModel.swift in Sources */,
+				FAC2C50027AC98B900C46AF1 /* CrewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class OpenNotifyClient: OpenNotifyApiProtocol {
+final class OpenNotifyViewModel: OpenNotifyApiProtocol {
     
     func requestPosition(completion: @escaping (Position?, Error?) -> Void) {
         
