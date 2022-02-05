@@ -15,32 +15,20 @@ struct CrewViewModel {
     init() {
         openNotifyViewModel = OpenNotifyViewModel()
         
-        getCrew() { (result) in
-            switch result {
-            case .success(let crew):
-                for astronaut in crew.people {
-                    let craft = astronaut.craft
-                    let name = astronaut.name
-                    print("Craft:\(craft) Astronaut:\(name)")
-                }
-            case .failure(let failure):
-                os_log(.error, "Unexpected error %@", [failure])
-            }
-        }
-    }
-    
-    private func getCrew(completion: @escaping(Result<Crew, NetworkError>) -> Void) {
-        openNotifyViewModel?.requestCrew() { (requestData, requestError) in
-            if let errorFound = requestError {
-                os_log(.error, "Unexpected error %@", [errorFound])
-                completion(.failure(.badURL))
-                return
-            }
-            guard let issPosition = requestData else {
-                completion(.failure(.errorData))
-                return
-            }
-            completion(.success(issPosition))
+        guard let url = URL(string: openNotifyViewModel?.crewURL ?? "") else { return }
+        let request = URLRequest(url: url)
+        
+        openNotifyViewModel?.makeUrlRequest(request) { (result: Result<Crew, NetworkError>) in
+          switch result {
+          case .success(let crew):
+              for astronaut in crew.people {
+                  let craft = astronaut.craft
+                  let name = astronaut.name
+                  print("Craft:\(craft) Astronaut:\(name)")
+              }
+          case .failure(let error):
+              print(error)
+          }
         }
     }
 }

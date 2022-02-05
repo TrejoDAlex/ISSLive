@@ -6,47 +6,37 @@
 //
 
 import Foundation
+import OSLog
 
 final class OpenNotifyViewModel: OpenNotifyApiProtocol {
     
-    func requestPosition(completion: @escaping (Position?, Error?) -> Void) {
-        
-        guard let url = URL(string: positionURL) else { return }
-        URLSession.shared.dataTask(with: url) { (sessionData, _, error) in
-        
-            if let errorFound = error {
-                return completion(nil, errorFound)
+    func makeUrlRequest<T: Decodable>(_ request: URLRequest, completion: @escaping (Result<T, NetworkError>) -> Void) {
+        let urlTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
+
+        if let errorFound = error {
+            os_log(.error, "Unexpected error %@", [errorFound])
+            completion(.failure(.badURL))
+            return
+        }
+
+        guard let response = response as? HTTPURLResponse, 200...299 ~= response.statusCode else {
+            completion(.failure(.badURL))
+            return
+        }
+
+        guard let data = data else {
+            completion(.failure(.errorData))
+            return
+        }
+
+        do {
+            let issPosition = try JSONDecoder().decode(T.self, from: data)
+                completion(.success(issPosition))
+            } catch {
+                completion(.failure(.errorData))
             }
-            
-            guard let data = sessionData else { return }
-            
-            do {
-                let issPosition = try JSONDecoder().decode(Position.self, from: data)
-                completion(issPosition, nil)
-            } catch let jsonError {
-                completion(nil, jsonError)
-            }
-        
-        }.resume()
-    }
-    
-    func requestCrew(completion: @escaping (Crew?, Error?) -> Void) {
-        guard let url = URL(string: crewURL) else { return }
-        URLSession.shared.dataTask(with: url) { (sessionData, _, error) in
-        
-            if let errorFound = error {
-                return completion(nil, errorFound)
-            }
-            
-            guard let data = sessionData else { return }
-            
-            do {
-                let issCrew = try JSONDecoder().decode(Crew.self, from: data)
-                completion(issCrew, nil)
-            } catch let jsonError {
-                completion(nil, jsonError)
-            }
-        
-        }.resume()
+        }
+
+        urlTask.resume()
     }
 }

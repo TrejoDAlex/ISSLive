@@ -11,8 +11,7 @@ import UIKit
 protocol OpenNotifyApiProtocol {
     var positionURL: String { get }
     var crewURL: String { get }
-    func requestPosition(completion: @escaping (Position?, Error?) -> Void)
-    func requestCrew(completion: @escaping (Crew?, Error?) -> Void)
+    func makeUrlRequest<T: Decodable>(_ request: URLRequest, completion: @escaping (Result<T, NetworkError>) -> Void)
 }
 
 extension OpenNotifyApiProtocol {

@@ -16,32 +16,20 @@ struct PositionViewModel {
     
     init() {
         openNotifyViewModel = OpenNotifyViewModel()
+
+        guard let url = URL(string: openNotifyViewModel?.positionURL ?? "") else { return }
+        let request = URLRequest(url: url)
         
-        getPosition() { (result) in
-            switch result {
-            case .success(let iss):
-                let lon = iss.issPosition.longitude
-                let lat = iss.issPosition.latitude
-                let timestamp = iss.timestamp
-                print("ISS Position: /n Longitude:\(lon) /n Latitude:\(lat) /n Timestamp:\(timestamp)")
-            case .failure(let failure):
-                os_log(.error, "Unexpected error %@", [failure])
-            }
-        }
-    }
-    
-    private func getPosition(completion: @escaping(Result<Position, NetworkError>) -> Void) {
-        openNotifyViewModel?.requestPosition() { (requestData, requestError) in
-            if let errorFound = requestError {
-                os_log(.error, "Unexpected error %@", [errorFound])
-                completion(.failure(.badURL))
-                return
-            }
-            guard let issPosition = requestData else {
-                completion(.failure(.errorData))
-                return
-            }
-            completion(.success(issPosition))
+        openNotifyViewModel?.makeUrlRequest(request) { (result: Result<Position, NetworkError>) in
+          switch result {
+          case .success(let iss):
+              let lon = iss.issPosition.longitude
+              let lat = iss.issPosition.latitude
+              let timestamp = iss.timestamp
+              print("ISS Position: /n Longitude:\(lon) /n Latitude:\(lat) /nTimestamp:\(timestamp)")
+          case .failure(let error):
+              print(error)
+          }
         }
     }
 }
