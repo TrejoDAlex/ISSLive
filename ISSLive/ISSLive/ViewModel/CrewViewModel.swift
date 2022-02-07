@@ -6,7 +6,12 @@
 //
 
 import Foundation
-import OSLog
+import os
+
+/// Makes requests to the api, in order to get the current number of people in space.
+///  When known it also returns the names and spacecraft those people are on.
+///  This API takes no inputs in. Then, notifies the view through binding,
+///  in order to update the UI data.
 
 struct CrewViewModel {
     
@@ -24,10 +29,9 @@ struct CrewViewModel {
               for astronaut in crew.people {
                   let craft = astronaut.craft
                   let name = astronaut.name
-                  print("Craft:\(craft) Astronaut:\(name)")
               }
           case .failure(let error):
-              print(error)
+              os_log("\(error.localizedDescription)")
           }
         }
     }

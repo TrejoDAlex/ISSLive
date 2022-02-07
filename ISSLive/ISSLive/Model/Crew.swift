@@ -7,6 +7,8 @@
 
 import Foundation
 
+///  This struct models the people in space API response.
+
 struct Crew: Codable {
     let people: [People]
 }
