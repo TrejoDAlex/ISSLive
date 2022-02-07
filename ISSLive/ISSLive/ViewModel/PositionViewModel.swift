@@ -10,6 +10,10 @@
 import Foundation
 import OSLog
 
+protocol PositionProtocol {
+    
+}
+
 struct PositionViewModel {
    
     private var openNotifyViewModel: OpenNotifyViewModel?
