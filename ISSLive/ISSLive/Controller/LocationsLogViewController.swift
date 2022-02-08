@@ -11,15 +11,27 @@ import CoreData
 
 /// Manages the table that displays the ISS locations history.
 final class LocationsLogViewController: UIViewController {
+    @IBOutlet private weak var leftMenuBtn: UIBarButtonItem?
+    @IBOutlet private weak var tableView: UITableView!
     
-    @IBOutlet weak var tableView: UITableView!
-    
-    var locations: [NSManagedObject]?
+    var locations: [NSManagedObject]? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-    }    
+        title = Constant.Logs.navTitle
+        locations = PersistentLocations.shared.locations
+        setupMenu()
+    }
+    
+    private func setupMenu() {
+        leftMenuBtn?.target = revealViewController()
+        leftMenuBtn?.action = #selector(revealViewController()?.revealSideMenu)
+    }
 }
 
 extension LocationsLogViewController: UITableViewDataSource {

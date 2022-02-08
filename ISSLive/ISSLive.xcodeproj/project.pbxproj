@@ -10,6 +10,8 @@
 		39A81055FEDA54A0EC49107B /* Pods_ISSLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F10740A9EB35F4B623A5B4E /* Pods_ISSLive.framework */; };
 		814C567327B20A5B00F4419A /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C567227B20A5B00F4419A /* LeftMenuViewController.swift */; };
 		814C567527B20AFF00F4419A /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C567427B20AFF00F4419A /* MenuTableViewCell.swift */; };
+		814C567827B2293A00F4419A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C567727B2293A00F4419A /* MainViewController.swift */; };
+		814C567A27B2587800F4419A /* PersistentLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C567927B2587700F4419A /* PersistentLocations.swift */; };
 		FAC2C4DC27AB062400C46AF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4DB27AB062400C46AF1 /* AppDelegate.swift */; };
 		FAC2C4DE27AB062400C46AF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4DD27AB062400C46AF1 /* SceneDelegate.swift */; };
 		FAC2C4E027AB062400C46AF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4DF27AB062400C46AF1 /* HomeViewController.swift */; };
@@ -31,6 +33,8 @@
 		3F10740A9EB35F4B623A5B4E /* Pods_ISSLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISSLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		814C567227B20A5B00F4419A /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		814C567427B20AFF00F4419A /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		814C567727B2293A00F4419A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		814C567927B2587700F4419A /* PersistentLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentLocations.swift; sourceTree = "<group>"; };
 		AE270AA04FBBA4C51D156641 /* Pods-ISSLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISSLive.release.xcconfig"; path = "Target Support Files/Pods-ISSLive/Pods-ISSLive.release.xcconfig"; sourceTree = "<group>"; };
 		F190EB923CBF8A6DBD555B15 /* Pods-ISSLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISSLive.debug.xcconfig"; path = "Target Support Files/Pods-ISSLive/Pods-ISSLive.debug.xcconfig"; sourceTree = "<group>"; };
 		FAC2C4D827AB062400C46AF1 /* ISSLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISSLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +161,7 @@
 				FAC2C4DF27AB062400C46AF1 /* HomeViewController.swift */,
 				814C567227B20A5B00F4419A /* LeftMenuViewController.swift */,
 				FAFB7CC727B2119300C6F997 /* LocationsLogViewController.swift */,
+				814C567727B2293A00F4419A /* MainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				FAC2C4DB27AB062400C46AF1 /* AppDelegate.swift */,
 				FAC2C4DD27AB062400C46AF1 /* SceneDelegate.swift */,
 				FAC2C50127B18D6900C46AF1 /* Constant.swift */,
+				814C567927B2587700F4419A /* PersistentLocations.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -286,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC2C4E027AB062400C46AF1 /* HomeViewController.swift in Sources */,
+				814C567A27B2587800F4419A /* PersistentLocations.swift in Sources */,
+				814C567827B2293A00F4419A /* MainViewController.swift in Sources */,
 				FAC2C4F427AB0B6D00C46AF1 /* OpenNotifyApiProtocol.swift in Sources */,
 				814C567527B20AFF00F4419A /* MenuTableViewCell.swift in Sources */,
 				FAC2C4F827AB104000C46AF1 /* Position.swift in Sources */,

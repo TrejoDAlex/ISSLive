@@ -9,19 +9,13 @@ import Foundation
 import UIKit
 
 final class MenuTableViewCell: UITableViewCell {
-    class var identifier: String { return String(describing: self) }
+    static var identifier: String { return String(describing: self) }
     @IBOutlet private weak var titleLabel: UILabel?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setup()
-    }
-    
-    private func setup() {
-        self.backgroundColor = .clear
-    }
-    
     func fillData(title: String) {
+        backgroundColor = .clear
+        titleLabel?.textColor = .white
+        print("title, titleLabel", title, titleLabel)
         titleLabel?.text = title
     }
 }

@@ -8,11 +8,16 @@
 import Foundation
 import UIKit
 
+protocol LeftMenuViewControllerDelegate {
+    func selectedCell(_ row: Int)
+}
+
 final class LeftMenuViewController: UIViewController {
-    @IBOutlet var leftMenuTableView: UITableView?
-    let items: [String] = ["Home",
-                           "Astronauts",
-                           "Contact"]
+    @IBOutlet private var leftMenuTableView: UITableView?
+    var delegate: LeftMenuViewControllerDelegate?
+    private let items: [String] = ["Home",
+                                   "Log",
+                                   "Contact"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,15 +27,14 @@ final class LeftMenuViewController: UIViewController {
     private func setupTableView() {
         leftMenuTableView?.delegate = self
         leftMenuTableView?.dataSource = self
-        leftMenuTableView?.backgroundColor = #colorLiteral(red: 0.2365731597, green: 0.5239473581, blue: 0.1610234678, alpha: 1)
+        leftMenuTableView?.backgroundColor = #colorLiteral(red: 0.2857798934, green: 0.6398172975, blue: 0.6006788611, alpha: 1)
         leftMenuTableView?.separatorStyle = .none
-        
-        // Register TableView Cell
-        // leftMenuTableView?.register(MenuTableViewCell(), forCellReuseIdentifier: MenuTableViewCell.identifier)
+        leftMenuTableView?.rowHeight = UITableView.automaticDimension
     }
     
-
-    
+    override func viewWillAppear(_ animated: Bool) {
+        leftMenuTableView?.reloadData()
+    }
 }
 
 extension LeftMenuViewController: UITableViewDataSource {
@@ -39,16 +43,22 @@ extension LeftMenuViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("MenuTableViewCell.description()", MenuTableViewCell.description())
         let title = items[indexPath.row]
-        if let cell = tableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.description()) as? MenuTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.identifier,
+                                                    for: indexPath) as? MenuTableViewCell {
             cell.fillData(title: title)
             return cell
         }
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.selectedCell(indexPath.row)
+    }
 }
 
 extension LeftMenuViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
