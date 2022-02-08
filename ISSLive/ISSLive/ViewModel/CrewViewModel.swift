@@ -30,7 +30,11 @@ struct CrewViewModel {
                   let name = astronaut.name
               }
           case .failure(let error):
-              os_log("\(error.localizedDescription)")
+              if #available(iOS 14.0, *) {
+                  os_log("\(error.localizedDescription)")
+              } else {
+                  // Fallback on earlier versions
+              }
           }
         }
     }
