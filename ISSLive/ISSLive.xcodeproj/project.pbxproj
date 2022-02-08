@@ -23,6 +23,8 @@
 		FAC2C4FE27AC931600C46AF1 /* PositionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4FD27AC931600C46AF1 /* PositionViewModel.swift */; };
 		FAC2C50027AC98B900C46AF1 /* CrewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4FF27AC98B900C46AF1 /* CrewViewModel.swift */; };
 		FAC2C50227B18D6900C46AF1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C50127B18D6900C46AF1 /* Constant.swift */; };
+		FAFB7CC827B2119300C6F997 /* LocationsLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB7CC727B2119300C6F997 /* LocationsLogViewController.swift */; };
+		FAFB7CCB27B2134D00C6F997 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAFB7CC927B2134D00C6F997 /* Locations.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		FAC2C4FD27AC931600C46AF1 /* PositionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionViewModel.swift; sourceTree = "<group>"; };
 		FAC2C4FF27AC98B900C46AF1 /* CrewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewViewModel.swift; sourceTree = "<group>"; };
 		FAC2C50127B18D6900C46AF1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		FAFB7CC727B2119300C6F997 /* LocationsLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsLogViewController.swift; sourceTree = "<group>"; };
+		FAFB7CCA27B2134D00C6F997 /* Locations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Locations.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		FAC2C4CF27AB062400C46AF1 = {
 			isa = PBXGroup;
 			children = (
+				FAFB7CCC27B2136E00C6F997 /* CoreData */,
 				FAC2C4DA27AB062400C46AF1 /* ISSLive */,
 				FAC2C4D927AB062400C46AF1 /* Products */,
 				F2349FA503EE90387A061CF9 /* Pods */,
@@ -151,6 +156,7 @@
 			children = (
 				FAC2C4DF27AB062400C46AF1 /* HomeViewController.swift */,
 				814C567227B20A5B00F4419A /* LeftMenuViewController.swift */,
+				FAFB7CC727B2119300C6F997 /* LocationsLogViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +178,14 @@
 				FAC2C50127B18D6900C46AF1 /* Constant.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		FAFB7CCC27B2136E00C6F997 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FAFB7CC927B2134D00C6F997 /* Locations.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +289,9 @@
 				FAC2C4F427AB0B6D00C46AF1 /* OpenNotifyApiProtocol.swift in Sources */,
 				814C567527B20AFF00F4419A /* MenuTableViewCell.swift in Sources */,
 				FAC2C4F827AB104000C46AF1 /* Position.swift in Sources */,
+				FAFB7CCB27B2134D00C6F997 /* Locations.xcdatamodeld in Sources */,
 				FAC2C4FE27AC931600C46AF1 /* PositionViewModel.swift in Sources */,
+				FAFB7CC827B2119300C6F997 /* LocationsLogViewController.swift in Sources */,
 				FAC2C4FA27AB116D00C46AF1 /* Crew.swift in Sources */,
 				FAC2C4DC27AB062400C46AF1 /* AppDelegate.swift in Sources */,
 				FAC2C4DE27AB062400C46AF1 /* SceneDelegate.swift in Sources */,
@@ -506,6 +522,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAFB7CC927B2134D00C6F997 /* Locations.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAFB7CCA27B2134D00C6F997 /* Locations.xcdatamodel */,
+			);
+			currentVersion = FAFB7CCA27B2134D00C6F997 /* Locations.xcdatamodel */;
+			path = Locations.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FAC2C4D027AB062400C46AF1 /* Project object */;
 }

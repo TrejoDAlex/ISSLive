@@ -8,6 +8,7 @@
 import UIKit
 import os.log
 import MapKit
+import CoreData
 
 /// Displays the International Space Station location on a MKMapView, the ISS location is updated every 10 seconds.
 final class HomeViewController: UIViewController {
@@ -16,8 +17,24 @@ final class HomeViewController: UIViewController {
     private var crewViewModel: CrewViewModel?
     private var issLocation: CLLocation?
     private var pointAnnotation: MKPointAnnotation?
+    var locations: [NSManagedObject] = []
     
     @IBOutlet private weak var mapView: MKMapView?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Location")
+        
+        do {
+            locations = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +64,7 @@ final class HomeViewController: UIViewController {
     
     private func updateLocation() {
         guard let location = issLocation else { return }
+        saveLocation(location: location)
         
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: Constant.mapZoom, longitudinalMeters: Constant.mapZoom)
         
@@ -58,13 +76,33 @@ final class HomeViewController: UIViewController {
             self.mapView?.setRegion(coordinateRegion, animated: true)
         })
     }
+    
+    private func saveLocation(location: CLLocation) {
+        DispatchQueue.main.async {
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+            
+            let managedContext = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "Location", in: managedContext)!
+            let newLocation = NSManagedObject(entity: entity, insertInto: managedContext)
+            
+            newLocation.setValue(location.coordinate.latitude, forKey: "latitude")
+            newLocation.setValue(location.coordinate.longitude, forKey: "longitude")
+            
+            do {
+                try managedContext.save()
+                self.locations.append(newLocation)
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+        }
+    }
 }
 
 extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: Constant.issMarker)
         annotationView.markerTintColor = Constant.issMarkerColor
-        annotationView.glyphImage = UIImage(named: Constant.issIcon)    
+        annotationView.glyphImage = UIImage(named: Constant.issIcon)
         return annotationView
     }
 }
