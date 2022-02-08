@@ -35,3 +35,13 @@ Instructions:
 - Open the ISSLive.xcworkspace.
 - On Xcode, select an iPhone simulator.
 - Run the project.
+
+## ScreenShots:
+
+**App functionality**
+![App functionality](https://github.com/TrejoDAlex/ISSLive/blob/develop/Functionality.gif)
+
+**Menu functionality**
+![Menu functionality](https://github.com/TrejoDAlex/ISSLive/blob/develop/Menu.gif)
+
+
