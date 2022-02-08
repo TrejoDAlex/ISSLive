@@ -97,8 +97,6 @@ extension MainViewController: LeftMenuViewControllerDelegate {
             showViewController(viewController: UINavigationController.self, storyboardId: Constant.Home.navId)
         case 1:
             showViewController(viewController: UINavigationController.self, storyboardId: Constant.Logs.navId)
-        case 2:
-            showViewController(viewController: UINavigationController.self, storyboardId: Constant.Contact.navId)
         default:
             break
         }

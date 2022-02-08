@@ -16,8 +16,9 @@ final class LeftMenuViewController: UIViewController {
     @IBOutlet private var leftMenuTableView: UITableView?
     var delegate: LeftMenuViewControllerDelegate?
     private let items: [String] = ["Home",
-                                   "Log",
-                                   "Contact"]
+                                   "Log"]
+    private let images: [String] = ["mapIcon",
+                                   "logIcon"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +45,10 @@ extension LeftMenuViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let title = items[indexPath.row]
+        let image = images[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.identifier,
                                                     for: indexPath) as? MenuTableViewCell {
-            cell.fillData(title: title)
+            cell.fillData(title: title, image: image)
             return cell
         }
         return UITableViewCell()

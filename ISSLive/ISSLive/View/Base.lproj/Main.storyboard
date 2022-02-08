@@ -66,23 +66,34 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vc9-eY-lsN">
-                                                    <rect key="frame" x="16" y="16" width="228" height="46"/>
+                                                    <rect key="frame" x="88" y="16" width="156" height="46"/>
                                                     <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uln-Gl-8OL">
+                                                    <rect key="frame" x="16" y="6" width="56" height="66"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="ccy-47-cR3"/>
+                                                        <constraint firstAttribute="width" constant="56" id="ucG-xU-ZrW"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.38079977040000001" green="0.63184660670000004" blue="0.60000127550000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="vc9-eY-lsN" secondAttribute="trailing" constant="16" id="0ga-yA-V9N"/>
-                                                <constraint firstItem="vc9-eY-lsN" firstAttribute="leading" secondItem="gQu-wc-DMB" secondAttribute="leading" constant="16" id="5Kw-uw-2RU"/>
+                                                <constraint firstItem="Uln-Gl-8OL" firstAttribute="top" secondItem="gQu-wc-DMB" secondAttribute="top" constant="6" id="KjF-91-avb"/>
+                                                <constraint firstItem="vc9-eY-lsN" firstAttribute="leading" secondItem="Uln-Gl-8OL" secondAttribute="trailing" constant="16" id="RYB-CT-6ae"/>
                                                 <constraint firstItem="vc9-eY-lsN" firstAttribute="top" secondItem="gQu-wc-DMB" secondAttribute="top" constant="16" id="Syu-4L-O6G"/>
+                                                <constraint firstAttribute="bottom" secondItem="Uln-Gl-8OL" secondAttribute="bottom" constant="6" id="Uip-ZQ-Bl8"/>
                                                 <constraint firstAttribute="bottom" secondItem="vc9-eY-lsN" secondAttribute="bottom" constant="16" id="aOu-kA-bDB"/>
+                                                <constraint firstItem="Uln-Gl-8OL" firstAttribute="leading" secondItem="gQu-wc-DMB" secondAttribute="leading" constant="16" id="d94-k9-Kq8"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.066503411370000001" green="0.058622490979999997" blue="0.069146423969999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
+                                            <outlet property="itemImageView" destination="Uln-Gl-8OL" id="HZa-jf-R6U"/>
                                             <outlet property="titleLabel" destination="vc9-eY-lsN" id="iN8-ff-7Mz"/>
                                         </connections>
                                     </tableViewCell>
@@ -113,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KiG-MJ-Sg7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64" y="-509"/>
+            <point key="canvasLocation" x="63.768115942028992" y="-509.59821428571428"/>
         </scene>
         <!--Locations Log View Controller-->
         <scene sceneID="d0i-1Q-G7g">

@@ -39,8 +39,4 @@ struct Constant {
         static let navTitle = "Logs"
         static let navId = "LogsId"
     }
-    /// Contains the values used in ContactViewController..
-    struct Contact {
-        static let navId = "ContactsId"
-    }
 }

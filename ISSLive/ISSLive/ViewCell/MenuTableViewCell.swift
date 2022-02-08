@@ -11,11 +11,16 @@ import UIKit
 final class MenuTableViewCell: UITableViewCell {
     static var identifier: String { return String(describing: self) }
     @IBOutlet private weak var titleLabel: UILabel?
-    
-    func fillData(title: String) {
+    @IBOutlet private weak var itemImageView: UIImageView?
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
         backgroundColor = .clear
         titleLabel?.textColor = .white
-        print("title, titleLabel", title, titleLabel)
+    }
+    
+    func fillData(title: String, image: String) {
         titleLabel?.text = title
+        itemImageView?.image = UIImage(named: image)
     }
 }
