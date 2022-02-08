@@ -23,7 +23,7 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = Constant.Common.iss
+        title = Constant.Home.navTitle
         setupMapView()
         setupMenu()
     }

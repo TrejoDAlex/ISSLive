@@ -16,7 +16,7 @@ final class LeftMenuViewController: UIViewController {
     @IBOutlet private var leftMenuTableView: UITableView?
     var delegate: LeftMenuViewControllerDelegate?
     private let items: [String] = ["Home",
-                                   "Log"]
+                                   "Logs"]
     private let images: [String] = ["mapIcon",
                                    "logIcon"]
     

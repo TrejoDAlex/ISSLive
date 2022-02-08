@@ -24,6 +24,7 @@ struct Constant {
     }
     /// Contains the values used in HomeViewController.
     struct Home {
+        static let navTitle = "Home"
         static let issAnnotationTitle = "ISS"
         static let issMarker = "ISSMarker"
         static let issIcon = "spaceStation"
