@@ -43,6 +43,12 @@ final class HomeViewController: UIViewController {
         setupTimer()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let locationsLogViewController = segue.destination as? LocationsLogViewController else { return }
+        
+        locationsLogViewController.locations = locations
+    }
+    
     private func setupTimer() {
         Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { timer in
             self.positionViewModel?.makeRequest()
@@ -64,12 +70,11 @@ final class HomeViewController: UIViewController {
     
     private func updateLocation() {
         guard let location = issLocation else { return }
-        saveLocation(location: location)
-        
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: Constant.mapZoom, longitudinalMeters: Constant.mapZoom)
         
         guard let point = pointAnnotation else { return }
         point.coordinate = coordinate
+        saveLocation(location: location)
         
         DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
             self.mapView?.addAnnotation(point)
@@ -122,7 +127,7 @@ extension HomeViewController: MKAnnotation {
 }
 
 extension HomeViewController: PositionDelegate {
-    func getPosition(latitude: Double, longitude: Double, timestamp: Int) {
+    func getPosition(latitude: Double, longitude: Double) {
         issLocation = CLLocation(latitude: latitude, longitude: longitude)
         updateLocation()
     }

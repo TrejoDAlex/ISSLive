@@ -13,7 +13,7 @@ import os
 ///  with a unix timestamp for the time the location was valid. This API takes no inputs.
 ///  Then, notifies the view through binding, in order to update the UI data.
 protocol PositionDelegate {
-    func getPosition(latitude: Double, longitude: Double, timestamp: Int)
+    func getPosition(latitude: Double, longitude: Double)
 }
 
 class PositionViewModel {
@@ -36,7 +36,7 @@ class PositionViewModel {
           case .success(let iss):
               if let lat = Double(iss.issPosition.latitude),
                  let lon = Double(iss.issPosition.longitude) {
-                  self.delegate?.getPosition(latitude: lat, longitude: lon, timestamp: iss.timestamp)
+                  self.delegate?.getPosition(latitude: lat, longitude: lon)
               }
           case .failure(let error):
               if #available(iOS 14.0, *) {
