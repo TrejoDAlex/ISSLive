@@ -37,7 +37,6 @@ class PositionViewModel {
               if let lat = Double(iss.issPosition.latitude),
                  let lon = Double(iss.issPosition.longitude) {
                   self.delegate?.getPosition(latitude: lat, longitude: lon, timestamp: iss.timestamp)
-                  print("lat:\(lat) lon:\(lon)")
               }
           case .failure(let error):
               os_log("\(error.localizedDescription)")

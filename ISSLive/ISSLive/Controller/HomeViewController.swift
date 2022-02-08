@@ -15,6 +15,7 @@ final class HomeViewController: UIViewController {
     private var positionViewModel: PositionViewModel?
     private var crewViewModel: CrewViewModel?
     private var issLocation: CLLocation?
+    private var pointAnnotation: MKPointAnnotation?
     
     @IBOutlet private weak var mapView: MKMapView?
     
@@ -26,7 +27,7 @@ final class HomeViewController: UIViewController {
     }
     
     private func setupTimer() {
-        Timer.scheduledTimer(withTimeInterval: 4.0, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { timer in
             self.positionViewModel?.makeRequest()
             self.updateLocation()
         }
@@ -34,6 +35,8 @@ final class HomeViewController: UIViewController {
     
     private func setupMapView() {
         mapView?.delegate = self
+        pointAnnotation = MKPointAnnotation()
+        pointAnnotation?.title = Constant.issAnnotationTitle
     }
     
     private func initViewModels() {
@@ -46,14 +49,14 @@ final class HomeViewController: UIViewController {
         guard let location = issLocation else { return }
         
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: Constant.mapZoom, longitudinalMeters: Constant.mapZoom)
-        let pointAnnotation = MKPointAnnotation()
-    
-        pointAnnotation.title = Constant.issAnnotationTitle
-        pointAnnotation.coordinate = coordinate
-        print("Coordinate: \(coordinate)")
         
-        mapView?.addAnnotation(pointAnnotation)
-        mapView?.setRegion(coordinateRegion, animated: true)
+        guard let point = pointAnnotation else { return }
+        point.coordinate = coordinate
+        
+        DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
+            self.mapView?.addAnnotation(point)
+            self.mapView?.setRegion(coordinateRegion, animated: true)
+        })
     }
 }
 
@@ -61,7 +64,7 @@ extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: Constant.issMarker)
         annotationView.markerTintColor = Constant.issMarkerColor
-        annotationView.glyphImage = UIImage(named: Constant.issIcon)
+        annotationView.glyphImage = UIImage(named: Constant.issIcon)    
         return annotationView
     }
 }
