@@ -7,6 +7,7 @@ Project structure
 - Create repo.
 - Setup project.
 - Organize files following the MVVM pattern.
+- Install Cocoapods.
 - Install SwiftLint.
 
 User Experience (UX) and Design
