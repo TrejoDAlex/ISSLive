@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39A81055FEDA54A0EC49107B /* Pods_ISSLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F10740A9EB35F4B623A5B4E /* Pods_ISSLive.framework */; };
+		814C567327B20A5B00F4419A /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C567227B20A5B00F4419A /* LeftMenuViewController.swift */; };
+		814C567527B20AFF00F4419A /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C567427B20AFF00F4419A /* MenuTableViewCell.swift */; };
+		814C567827B2293A00F4419A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C567727B2293A00F4419A /* MainViewController.swift */; };
+		814C567A27B2587800F4419A /* PersistentLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C567927B2587700F4419A /* PersistentLocations.swift */; };
 		FAC2C4DC27AB062400C46AF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4DB27AB062400C46AF1 /* AppDelegate.swift */; };
 		FAC2C4DE27AB062400C46AF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4DD27AB062400C46AF1 /* SceneDelegate.swift */; };
 		FAC2C4E027AB062400C46AF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4DF27AB062400C46AF1 /* HomeViewController.swift */; };
@@ -20,9 +25,18 @@
 		FAC2C4FE27AC931600C46AF1 /* PositionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4FD27AC931600C46AF1 /* PositionViewModel.swift */; };
 		FAC2C50027AC98B900C46AF1 /* CrewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4FF27AC98B900C46AF1 /* CrewViewModel.swift */; };
 		FAC2C50227B18D6900C46AF1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C50127B18D6900C46AF1 /* Constant.swift */; };
+		FAFB7CC827B2119300C6F997 /* LocationsLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB7CC727B2119300C6F997 /* LocationsLogViewController.swift */; };
+		FAFB7CCB27B2134D00C6F997 /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAFB7CC927B2134D00C6F997 /* Locations.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F10740A9EB35F4B623A5B4E /* Pods_ISSLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISSLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		814C567227B20A5B00F4419A /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		814C567427B20AFF00F4419A /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		814C567727B2293A00F4419A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		814C567927B2587700F4419A /* PersistentLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentLocations.swift; sourceTree = "<group>"; };
+		AE270AA04FBBA4C51D156641 /* Pods-ISSLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISSLive.release.xcconfig"; path = "Target Support Files/Pods-ISSLive/Pods-ISSLive.release.xcconfig"; sourceTree = "<group>"; };
+		F190EB923CBF8A6DBD555B15 /* Pods-ISSLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISSLive.debug.xcconfig"; path = "Target Support Files/Pods-ISSLive/Pods-ISSLive.debug.xcconfig"; sourceTree = "<group>"; };
 		FAC2C4D827AB062400C46AF1 /* ISSLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISSLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC2C4DB27AB062400C46AF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC2C4DD27AB062400C46AF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +52,8 @@
 		FAC2C4FD27AC931600C46AF1 /* PositionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionViewModel.swift; sourceTree = "<group>"; };
 		FAC2C4FF27AC98B900C46AF1 /* CrewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewViewModel.swift; sourceTree = "<group>"; };
 		FAC2C50127B18D6900C46AF1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		FAFB7CC727B2119300C6F997 /* LocationsLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsLogViewController.swift; sourceTree = "<group>"; };
+		FAFB7CCA27B2134D00C6F997 /* Locations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Locations.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +61,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A81055FEDA54A0EC49107B /* Pods_ISSLive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48A0D0ED66BFD675AB0CEF6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F10740A9EB35F4B623A5B4E /* Pods_ISSLive.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		814C567627B20BBD00F4419A /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				814C567427B20AFF00F4419A /* MenuTableViewCell.swift */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
+		F2349FA503EE90387A061CF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F190EB923CBF8A6DBD555B15 /* Pods-ISSLive.debug.xcconfig */,
+				AE270AA04FBBA4C51D156641 /* Pods-ISSLive.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FAC2C4CF27AB062400C46AF1 = {
 			isa = PBXGroup;
 			children = (
+				FAFB7CCC27B2136E00C6F997 /* CoreData */,
 				FAC2C4DA27AB062400C46AF1 /* ISSLive */,
 				FAC2C4D927AB062400C46AF1 /* Products */,
+				F2349FA503EE90387A061CF9 /* Pods */,
+				48A0D0ED66BFD675AB0CEF6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +118,7 @@
 				FAC2C4FC27AC927D00C46AF1 /* Common */,
 				FAC2C4FB27AC927100C46AF1 /* ViewModel */,
 				FAC2C4F227AB098A00C46AF1 /* Controller */,
+				814C567627B20BBD00F4419A /* ViewCell */,
 				FAC2C4F127AB098200C46AF1 /* View */,
 				FAC2C4F027AB097B00C46AF1 /* Model */,
 				FAC2C4EF27AB097300C46AF1 /* Network */,
@@ -113,6 +159,9 @@
 			isa = PBXGroup;
 			children = (
 				FAC2C4DF27AB062400C46AF1 /* HomeViewController.swift */,
+				814C567227B20A5B00F4419A /* LeftMenuViewController.swift */,
+				FAFB7CC727B2119300C6F997 /* LocationsLogViewController.swift */,
+				814C567727B2293A00F4419A /* MainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -132,8 +181,17 @@
 				FAC2C4DB27AB062400C46AF1 /* AppDelegate.swift */,
 				FAC2C4DD27AB062400C46AF1 /* SceneDelegate.swift */,
 				FAC2C50127B18D6900C46AF1 /* Constant.swift */,
+				814C567927B2587700F4419A /* PersistentLocations.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		FAFB7CCC27B2136E00C6F997 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FAFB7CC927B2134D00C6F997 /* Locations.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +201,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAC2C4EC27AB062700C46AF1 /* Build configuration list for PBXNativeTarget "ISSLive" */;
 			buildPhases = (
+				DC9D4637A4798BCFFEF8619D /* [CP] Check Pods Manifest.lock */,
 				FAC2C4D427AB062400C46AF1 /* Sources */,
 				FAC2C4D527AB062400C46AF1 /* Frameworks */,
 				FAC2C4D627AB062400C46AF1 /* Resources */,
@@ -152,8 +211,6 @@
 			dependencies = (
 			);
 			name = ISSLive;
-			packageProductDependencies = (
-			);
 			productName = ISSLive;
 			productReference = FAC2C4D827AB062400C46AF1 /* ISSLive.app */;
 			productType = "com.apple.product-type.application";
@@ -182,8 +239,6 @@
 				Base,
 			);
 			mainGroup = FAC2C4CF27AB062400C46AF1;
-			packageReferences = (
-			);
 			productRefGroup = FAC2C4D927AB062400C46AF1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -206,18 +261,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DC9D4637A4798BCFFEF8619D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ISSLive-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FAC2C4D427AB062400C46AF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FAC2C4E027AB062400C46AF1 /* HomeViewController.swift in Sources */,
+				814C567A27B2587800F4419A /* PersistentLocations.swift in Sources */,
+				814C567827B2293A00F4419A /* MainViewController.swift in Sources */,
 				FAC2C4F427AB0B6D00C46AF1 /* OpenNotifyApiProtocol.swift in Sources */,
+				814C567527B20AFF00F4419A /* MenuTableViewCell.swift in Sources */,
 				FAC2C4F827AB104000C46AF1 /* Position.swift in Sources */,
+				FAFB7CCB27B2134D00C6F997 /* Locations.xcdatamodeld in Sources */,
 				FAC2C4FE27AC931600C46AF1 /* PositionViewModel.swift in Sources */,
+				FAFB7CC827B2119300C6F997 /* LocationsLogViewController.swift in Sources */,
 				FAC2C4FA27AB116D00C46AF1 /* Crew.swift in Sources */,
 				FAC2C4DC27AB062400C46AF1 /* AppDelegate.swift in Sources */,
 				FAC2C4DE27AB062400C46AF1 /* SceneDelegate.swift in Sources */,
+				814C567327B20A5B00F4419A /* LeftMenuViewController.swift in Sources */,
 				FAC2C50227B18D6900C46AF1 /* Constant.swift in Sources */,
 				FAC2C4F627AB0CE200C46AF1 /* OpenNotifyViewModel.swift in Sources */,
 				FAC2C50027AC98B900C46AF1 /* CrewViewModel.swift in Sources */,
@@ -364,6 +450,7 @@
 		};
 		FAC2C4ED27AB062700C46AF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F190EB923CBF8A6DBD555B15 /* Pods-ISSLive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -377,6 +464,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -392,6 +480,7 @@
 		};
 		FAC2C4EE27AB062700C46AF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE270AA04FBBA4C51D156641 /* Pods-ISSLive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -405,6 +494,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,6 +530,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAFB7CC927B2134D00C6F997 /* Locations.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAFB7CCA27B2134D00C6F997 /* Locations.xcdatamodel */,
+			);
+			currentVersion = FAFB7CCA27B2134D00C6F997 /* Locations.xcdatamodel */;
+			path = Locations.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FAC2C4D027AB062400C46AF1 /* Project object */;
 }
