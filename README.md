@@ -39,9 +39,11 @@ Instructions:
 ## ScreenShots:
 
 **App functionality**
+
 ![App functionality](https://github.com/TrejoDAlex/ISSLive/blob/develop/Functionality.gif)
 
 **Menu functionality**
+
 ![Menu functionality](https://github.com/TrejoDAlex/ISSLive/blob/develop/Menu.gif)
 
 
