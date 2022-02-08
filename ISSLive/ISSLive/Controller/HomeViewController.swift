@@ -22,6 +22,14 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupMapView()
         initViewModels()
+        setupTimer()
+    }
+    
+    private func setupTimer() {
+        Timer.scheduledTimer(withTimeInterval: 4.0, repeats: true) { timer in
+            self.positionViewModel?.makeRequest()
+            self.updateLocation()
+        }
     }
     
     private func setupMapView() {
@@ -35,7 +43,6 @@ final class HomeViewController: UIViewController {
     }
     
     private func updateLocation() {
-        
         guard let location = issLocation else { return }
         
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: Constant.mapZoom, longitudinalMeters: Constant.mapZoom)
@@ -43,6 +50,7 @@ final class HomeViewController: UIViewController {
     
         pointAnnotation.title = Constant.issAnnotationTitle
         pointAnnotation.coordinate = coordinate
+        print("Coordinate: \(coordinate)")
         
         mapView?.addAnnotation(pointAnnotation)
         mapView?.setRegion(coordinateRegion, animated: true)

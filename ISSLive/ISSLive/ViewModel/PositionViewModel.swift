@@ -22,6 +22,10 @@ class PositionViewModel {
     var delegate: PositionDelegate?
     
     init() {
+        makeRequest()
+    }
+    
+    func makeRequest() {
         openNotifyViewModel = OpenNotifyViewModel()
 
         guard let url = URL(string: self.openNotifyViewModel?.positionURL ?? "") else { return }
@@ -33,6 +37,7 @@ class PositionViewModel {
               if let lat = Double(iss.issPosition.latitude),
                  let lon = Double(iss.issPosition.longitude) {
                   self.delegate?.getPosition(latitude: lat, longitude: lon, timestamp: iss.timestamp)
+                  print("lat:\(lat) lon:\(lon)")
               }
           case .failure(let error):
               if #available(iOS 14.0, *) {
