@@ -30,7 +30,7 @@ Coding
 - Implement CoreData.
 
 Instructions:
-- Clone the repo or download zipped project.
+- Clone the repo or download the zipped project.
 - Open the ISSLive.xcworkspace.
 - On Xcode, select an iPhone simulator.
 - Run the project.
