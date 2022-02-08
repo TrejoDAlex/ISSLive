@@ -12,7 +12,6 @@ import os
 ///  When known it also returns the names and spacecraft those people are on.
 ///  This API takes no inputs in. Then, notifies the view through binding,
 ///  in order to update the UI data.
-
 struct CrewViewModel {
     
     private var openNotifyViewModel: OpenNotifyViewModel?

@@ -10,7 +10,6 @@ import os.log
 import MapKit
 
 /// Displays the International Space Station location on a MKMapView, the ISS location is updated every 10 seconds.
-
 final class HomeViewController: UIViewController {
     
     private var positionViewModel: PositionViewModel?
