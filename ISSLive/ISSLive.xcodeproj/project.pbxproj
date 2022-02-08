@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		39A81055FEDA54A0EC49107B /* Pods_ISSLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F10740A9EB35F4B623A5B4E /* Pods_ISSLive.framework */; };
+		814C567327B20A5B00F4419A /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C567227B20A5B00F4419A /* LeftMenuViewController.swift */; };
+		814C567527B20AFF00F4419A /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814C567427B20AFF00F4419A /* MenuTableViewCell.swift */; };
 		FAC2C4DC27AB062400C46AF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4DB27AB062400C46AF1 /* AppDelegate.swift */; };
 		FAC2C4DE27AB062400C46AF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4DD27AB062400C46AF1 /* SceneDelegate.swift */; };
 		FAC2C4E027AB062400C46AF1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C4DF27AB062400C46AF1 /* HomeViewController.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		3F10740A9EB35F4B623A5B4E /* Pods_ISSLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISSLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		814C567227B20A5B00F4419A /* LeftMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		814C567427B20AFF00F4419A /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		AE270AA04FBBA4C51D156641 /* Pods-ISSLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISSLive.release.xcconfig"; path = "Target Support Files/Pods-ISSLive/Pods-ISSLive.release.xcconfig"; sourceTree = "<group>"; };
 		F190EB923CBF8A6DBD555B15 /* Pods-ISSLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISSLive.debug.xcconfig"; path = "Target Support Files/Pods-ISSLive/Pods-ISSLive.debug.xcconfig"; sourceTree = "<group>"; };
 		FAC2C4D827AB062400C46AF1 /* ISSLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISSLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +68,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		814C567627B20BBD00F4419A /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				814C567427B20AFF00F4419A /* MenuTableViewCell.swift */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
 		F2349FA503EE90387A061CF9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +109,7 @@
 				FAC2C4FC27AC927D00C46AF1 /* Common */,
 				FAC2C4FB27AC927100C46AF1 /* ViewModel */,
 				FAC2C4F227AB098A00C46AF1 /* Controller */,
+				814C567627B20BBD00F4419A /* ViewCell */,
 				FAC2C4F127AB098200C46AF1 /* View */,
 				FAC2C4F027AB097B00C46AF1 /* Model */,
 				FAC2C4EF27AB097300C46AF1 /* Network */,
@@ -137,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC2C4DF27AB062400C46AF1 /* HomeViewController.swift */,
+				814C567227B20A5B00F4419A /* LeftMenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -259,11 +273,13 @@
 			files = (
 				FAC2C4E027AB062400C46AF1 /* HomeViewController.swift in Sources */,
 				FAC2C4F427AB0B6D00C46AF1 /* OpenNotifyApiProtocol.swift in Sources */,
+				814C567527B20AFF00F4419A /* MenuTableViewCell.swift in Sources */,
 				FAC2C4F827AB104000C46AF1 /* Position.swift in Sources */,
 				FAC2C4FE27AC931600C46AF1 /* PositionViewModel.swift in Sources */,
 				FAC2C4FA27AB116D00C46AF1 /* Crew.swift in Sources */,
 				FAC2C4DC27AB062400C46AF1 /* AppDelegate.swift in Sources */,
 				FAC2C4DE27AB062400C46AF1 /* SceneDelegate.swift in Sources */,
+				814C567327B20A5B00F4419A /* LeftMenuViewController.swift in Sources */,
 				FAC2C50227B18D6900C46AF1 /* Constant.swift in Sources */,
 				FAC2C4F627AB0CE200C46AF1 /* OpenNotifyViewModel.swift in Sources */,
 				FAC2C50027AC98B900C46AF1 /* CrewViewModel.swift in Sources */,
