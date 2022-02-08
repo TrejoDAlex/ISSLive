@@ -28,3 +28,9 @@ Coding
 - Code LeftMenuViewController.
 - Code LocationsLogViewController.
 - Implement CoreData.
+
+Instructions:
+- Clone the repo or download zipped project.
+- Open the ISSLive.xcworkspace.
+- On Xcode, select an iPhone simulator.
+- Run the project.
