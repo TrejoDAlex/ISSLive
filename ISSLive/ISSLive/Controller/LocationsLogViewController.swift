@@ -19,8 +19,7 @@ final class LocationsLogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-    }
-    
+    }    
 }
 
 extension LocationsLogViewController: UITableViewDataSource {
