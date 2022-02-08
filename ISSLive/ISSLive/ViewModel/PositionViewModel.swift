@@ -35,7 +35,11 @@ class PositionViewModel {
                   self.delegate?.getPosition(latitude: lat, longitude: lon, timestamp: iss.timestamp)
               }
           case .failure(let error):
-              os_log("\(error.localizedDescription)")
+              if #available(iOS 14.0, *) {
+                  os_log("\(error.localizedDescription)")
+              } else {
+                  // Fallback on earlier versions
+              }
           }
         }
     }
