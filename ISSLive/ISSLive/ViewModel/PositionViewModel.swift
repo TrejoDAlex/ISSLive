@@ -16,7 +16,7 @@ protocol PositionDelegate {
     func getPosition(latitude: Double, longitude: Double)
 }
 
-class PositionViewModel {
+final class PositionViewModel {
    
     private var openNotifyViewModel: OpenNotifyViewModel?
     var delegate: PositionDelegate?
